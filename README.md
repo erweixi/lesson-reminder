@@ -1,5 +1,5 @@
 # lesson-reminder
-一个用于提醒上课的课表bot
+一个用于提醒上课的课表bot,会在上课前20分钟提醒你上课
 
 <br> 使用前 <br>
 根据自己的需要修改config.py和main.py <br>
