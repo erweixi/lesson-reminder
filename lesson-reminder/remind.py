@@ -18,6 +18,7 @@ async def one():
     for i in dic:
         if not dic[i][2]:
             del_in(f'./timeable/loadmmy/{weday}-{now}.json', i)
+            return
         dic[i][2] -= 1
         await bot.send_private_msg(user_id=i, message=f'叮铃铃~~检测到下节课为{dic[i][0]}，起床准备上课啦！！！')
 
@@ -29,6 +30,10 @@ async def two():
     now = 1
     dic = await load_in(f'./timeable/loadmmy/{weday}-{now}.json')
     for i in dic:
+        if not dic[i][2]:
+            del_in(f'./timeable/loadmmy/{weday}-{now}.json', i)
+            return
+        dic[i][2] -= 1
         await bot.send_private_msg(user_id=i, message=f'叮铃铃~~检测到下节课为{dic[i][0]}，记得好好上课哟~')
 
 
@@ -39,6 +44,10 @@ async def three():
     now = 2
     dic = await load_in(f'./timeable/loadmmy/{weday}-{now}.json')
     for i in dic:
+        if not dic[i][2]:
+            del_in(f'./timeable/loadmmy/{weday}-{now}.json', i)
+            return
+        dic[i][2] -= 1
         await bot.send_private_msg(user_id=i, message=f'叮铃铃~~检测到下节课为{dic[i][0]}，准备好迎接一个清爽的下午了吗！')
 
 
@@ -49,6 +58,10 @@ async def four():
     now = 3
     dic = await load_in(f'./timeable/loadmmy/{weday}-{now}.json')
     for i in dic:
+        if not dic[i][2]:
+            del_in(f'./timeable/loadmmy/{weday}-{now}.json', i)
+            return
+        dic[i][2] -= 1
         await bot.send_private_msg(user_id=i, message=f'叮铃铃~~检测到下节课为{dic[i][0]}，这个下午过得还开心吗~')
 
 
@@ -59,4 +72,8 @@ async def five():
     now = 4
     dic = await load_in(f'./timeable/loadmmy/{weday}-{now}.json')
     for i in dic:
+        if not dic[i][2]:
+            del_in(f'./timeable/loadmmy/{weday}-{now}.json', i)
+            return
+        dic[i][2] -= 1
         await bot.send_private_msg(user_id=i, message=f'叮铃铃~~检测到主人下节课为{dic[i][0]}，这是最后一节课啦，主人加油哦！')
